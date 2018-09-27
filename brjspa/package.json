@@ -1,0 +1,26 @@
+{
+  "name": "brjspa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.1.1",
+    "api-ai-javascript": "^2.0.0-beta.21",
+    "botframework-webchat": "^0.14.3-master.b13a4b9",
+    "jquery": "^3.3.1",
+    "material-ui": "^0.20.2",
+    "materialize-css": "^1.0.0-rc.2",
+    "milligram": "^1.3.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
