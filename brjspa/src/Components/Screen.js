@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Screen = () => {
     return (
         <div>
-            <NavLink to="/Chatbot">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">refresh</i></a>
-            </NavLink>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nesciunt maxime illum perferendis a officiis nemo pariatur! Tempore inventore nemo beatae, fuga excepturi dolores harum, doloremque, perferendis eaque vel sapiente.</p>
         </div>
     )
 

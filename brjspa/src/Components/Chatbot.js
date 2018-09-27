@@ -2,16 +2,9 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import {sendMessage} from './Chat';
-import $ from 'jquery'
 
-$(document).ready(function() {
-   
-    $('#autoscroll').click(function(){
-        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-        return false;
-    });
 
-});
+
 
 class Chatbot extends Component {
     render(){
@@ -25,7 +18,7 @@ class Chatbot extends Component {
                     </ul>
                 </div>
                 <div className="container">
-                    <input type="text" onKeyDown={ (e) => e.keyCode === 13 ? sendMessage(e.target.value) : null }/>
+                    <input id='input' type="text" onKeyDown={ (e) => e.keyCode === 13 ? sendMessage(e.target.value) : null }/>
                 </div>
                 <NavLink to="/Page">
                     <div className="centerwrapper">
