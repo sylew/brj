@@ -1,7 +1,7 @@
 
 import { ApiAiClient } from "api-ai-javascript";
 import { applyMiddleware, createStore } from 'redux';
-
+import $ from 'jquery'
 
 
 
@@ -29,6 +29,13 @@ const messageMiddleware = () => next => action => {
                 next(sendMessage(fulfillment.speech, 'bot'));
                 var msg = new SpeechSynthesisUtterance(fulfillment.speech);
                 window.speechSynthesis.speak(msg);
+                $(document).ready(function() {                
+                        $('#autoscroll').animate({scrollTop:$('#autoscroll').height()}, 'slow');
+                        $('input:text').val("");
+                        return false;
+                });
+                console.log(response);
+
             }
     }
 }

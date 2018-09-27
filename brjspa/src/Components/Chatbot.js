@@ -4,7 +4,14 @@ import { connect } from 'react-redux';
 import {sendMessage} from './Chat';
 import $ from 'jquery'
 
+$(document).ready(function() {
+   
+    $('#autoscroll').click(function(){
+        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+        return false;
+    });
 
+});
 
 class Chatbot extends Component {
     render(){
@@ -12,7 +19,7 @@ class Chatbot extends Component {
         return (
             <div className="chatbot">
                 <h1 class="center slideDown">How may we help you?</h1>
-                <div className="scroll">
+                <div className="scroll" id="autoscroll">
                     <ul>
                         { feed.map( entry => <li>{entry.text}</li> )}
                     </ul>
