@@ -3,6 +3,8 @@ import { ApiAiClient } from "api-ai-javascript";
 import { applyMiddleware, createStore } from 'redux';
 
 
+
+
 const accessToken= '77f5acee6c974ba08874379fab70aafc';
 const client = new ApiAiClient({accessToken})
 
@@ -25,7 +27,8 @@ const messageMiddleware = () => next => action => {
             function onSuccess(response){
                 const { result: {fulfillment }} = response;
                 next(sendMessage(fulfillment.speech, 'bot'));
-                console.log(response);
+                var msg = new SpeechSynthesisUtterance(fulfillment.speech);
+                window.speechSynthesis.speak(msg);
             }
     }
 }

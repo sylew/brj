@@ -4,7 +4,6 @@ import Chatbot from './Chatbot'
 const ChatbotHistory = () => {
     return (
         <div>
-            aaa
             <Chatbot />
         </div>
     )

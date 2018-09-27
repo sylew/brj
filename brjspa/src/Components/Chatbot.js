@@ -17,11 +17,15 @@ class Chatbot extends Component {
                         { feed.map( entry => <li>{entry.text}</li> )}
                     </ul>
                 </div>
-                <input type="text" onKeyDown={ (e) => e.keyCode === 13 ? sendMessage(e.target.value) : null }/>
+                <div className="container">
+                    <input type="text" onKeyDown={ (e) => e.keyCode === 13 ? sendMessage(e.target.value) : null }/>
+                </div>
                 <NavLink to="/Page">
-                    <button class="btn waves-effect waves-light btn-large slideUp" type="submit" name="action">
-                        <i class="material-icons">navigate_next</i>
-                    </button>
+                    <div className="centerwrapper">
+                        <button class="btn waves-effect waves-light btn-large slideUp" type="submit" name="action">
+                            <i class="material-icons">navigate_next</i>
+                        </button>
+                    </div>
                 </NavLink>
             </div>
         )
