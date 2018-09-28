@@ -13,6 +13,7 @@ const Choice = () => {
                         Sue
                     </NavLink></li>
                     <li><NavLink to="/InsurancePage">Claim Insurance</NavLink></li>
+                    <li><a target="_blank" href="https://www.rainlily.org.hk/rainlily.php?l=en&p=ineedhelp">Emotional Support</a></li>
                 </ul>
             </div>
     )

@@ -8,7 +8,7 @@ const Screen = () => {
         <form>
             <label>
                 Name:
-                <input type="text" name="name" defaultValue="Felix Wong"/>
+                <input type="text" name="name" defaultValue="Cecilia Wong"/>
             </label>
             <label>
                 Where this happened:

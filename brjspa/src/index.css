@@ -53,19 +53,56 @@ ul li:nth-child(even) {
 
 .page #Choice {
   grid-area: Choice;
-  background-color: rgb(50, 108, 139);
+  background-color: #4834d4;
   visibility: hidden;
 }
 
 .page #Screen {
   grid-area: Screen;
-  background-color: rgb(32, 66, 117);
+  background-color: #686de0;
   visibility: hidden;
 }
 
 
 .page #ChatbotHistory {
   grid-area: ChatbotHistory;
-  background-color: rgb(50, 108, 139);
+  background-color: #4834d4;
   visibility: hidden;
+}
+
+
+
+
+.initechNode {
+  border: solid 3px black;
+  background-color:#eae6d7;
+  border-radius: 3px;
+  padding: 5px;
+  width: 150px;
+  display: inline-block;
+}
+
+#initechOrgChart .orgNodeChildGroup .nodeGroupLineVerticalMiddle {
+  border-right: solid 5px black
+}
+
+#initechOrgChart .nodeLineBorderTop {
+  border-top: solid 5px black;
+}
+
+.initechNode {
+  border: solid 3px black;
+  background-color:#eae6d7;
+  border-radius: 3px;
+  padding: 5px;
+  width: 150px;
+  display: inline-block;
+}
+
+#initechOrgChart .orgNodeChildGroup .nodeGroupLineVerticalMiddle {
+  border-right: solid 5px black
+}
+
+#initechOrgChart .nodeLineBorderTop {
+  border-top: solid 5px black;
 }
