@@ -6,6 +6,7 @@ import $ from 'jquery'
 import 'orgchart'
 import OrgChart from 'react-orgchart'
 import 'react-orgchart/index.css'
+import { Document } from 'react-pdf'
 
 
 
@@ -28,7 +29,7 @@ class SuePage extends Component {
             children: [
               {
                 name: "File Lawsuit",
-                actor: "Ron Livingston",
+                actor: "",
                 children: [
                   {
                     name: "Sex Discrimination Ordinance s2(5)",
@@ -100,11 +101,11 @@ class SuePage extends Component {
           };
           const initechOrg2 = {
             name: "Initiation of Civil Proceedings",
-            actor: "Gary Cole",
+            actor: "",
             children: [
                 {
                     name: "File Notice of Claim (Form 1)",
-                    actor: "",
+                    actor: "pdfForm1",
                     children: [
                         {
                             name: "Respondent replies with notice (Form 3)",
@@ -170,21 +171,23 @@ class SuePage extends Component {
              
             ]
           };
-          var model = ()=>{
-                     console.log
-        window.$(document).ready(function() {
-            window.$('.modal').modal();
-        });
+          var model = (stuff) => {
+            
+            if (stuff == "pdfForm1" || stuff == ""){
+                console.log("nope");
+            }else{
+                alert(stuff);
+            }
           }
           const MyNodeComponent = ({node}) => {
             return (
-                    <div className="initechNode" onClick={() => alert(node.actor)}>{ node.name }</div>
+                    <div className="initechNode" onClick={() => model(node.actor)}>{ node.name }</div>
                    
                );
           };
           const MyNodeComponent1 = ({node}) => {
             return (
-                <div className="initechNode" onClick={() => alert(node.actor)}>{ node.name }</div>
+                <div className="initechNode" onClick={() => model(node.actor)}>{ node.name }</div>
             
                );
           };

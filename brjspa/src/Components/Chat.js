@@ -90,7 +90,11 @@ function handleAction(actions,speech){
                 userData.sueWho = "Consultant";
             }
             prevAction = "input.welcomeclassificationSexualHarassmentsueConsultant";
-            break;            
+            break;    
+        case "police":
+         window.location = "https://www.google.com/maps/search/police+/@13.7593618,100.4906089,14z/data=!3m1!4b1";
+
+
         default:
             console.log("default");
     }
@@ -99,7 +103,7 @@ function handleAction(actions,speech){
 
         
 
-const initState = [{ text: 'hey'}];
+const initState = [{ text: 'Greetings. This is Sue. How may I help you?'}];
 
 const messageReducer = (state = initState, action) => {
     switch (action.type) {
