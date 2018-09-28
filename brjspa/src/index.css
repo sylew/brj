@@ -53,19 +53,19 @@ ul li:nth-child(even) {
 
 .page #Choice {
   grid-area: Choice;
-  background-color: red;
+  background-color: rgb(50, 108, 139);
   visibility: hidden;
 }
 
 .page #Screen {
   grid-area: Screen;
-  background-color: green;
+  background-color: rgb(32, 66, 117);
   visibility: hidden;
 }
 
 
 .page #ChatbotHistory {
   grid-area: ChatbotHistory;
-  background-color: purple;
+  background-color: rgb(50, 108, 139);
   visibility: hidden;
 }

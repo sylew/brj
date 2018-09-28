@@ -30,15 +30,74 @@ const messageMiddleware = () => next => action => {
                 var msg = new SpeechSynthesisUtterance(fulfillment.speech);
                 window.speechSynthesis.speak(msg);
                 $(document).ready(function() {                
-                        $('#autoscroll').animate({scrollTop:$('#autoscroll').height()}, 'slow');
-                        $('input:text').val("");
-                        return false;
-                });
-                console.log(response);
+                    $('#autoscroll').animate({scrollTop:$('#autoscroll').height()}, 'slow');
+                    $('input:text').val("");
+                    return false;
+            });
+            
+            const { result: {action }} = response;
+            handleAction(action,fulfillment.speech);
+            console.log(userData);
 
             }
     }
 }
+
+var userData = 
+{
+    initialRecount: "",
+    type: "",
+    isFromWork: "",
+    where: "Thailand",
+    sueWho: ""
+};
+
+
+
+var prevAction = "";
+
+function handleAction(actions,speech){
+    switch(actions){
+        case "input.welcome":
+            //start saving information
+            userData.initialRecount= speech;
+            prevAction = "input.welcome";
+            break;
+
+
+        //sexualHarasssment
+        case "classificationSexualHarassment":
+            //record only if prev is input.welcome
+            if(prevAction = "input.welcome"){
+                userData.type = "sexualHarassment";
+            }
+            prevAction = "input.welcomeclassificationSexualHarassment";
+            break;
+
+        case "ClassificationSexualHarassment.ClassificationSexualHarassment-yes":
+            //record only if prev is input.welcome
+            if(prevAction = "input.welcomeclassificationSexualHarassment"){
+                userData.isFromWork = true;
+                userData.sueWho = "Consultant, Firm";
+            }
+            prevAction = "input.welcomeclassificationSexualHarassmentClassificationSexualHarassment.ClassificationSexualHarassment-yes";
+            break;
+
+        case "sueConsultant":
+            //record only if prev is input.welcome
+            if(prevAction = "input.welcomeclassificationSexualHarassment"){
+                userData.isFromWork = false;
+                userData.sueWho = "Consultant";
+            }
+            prevAction = "input.welcomeclassificationSexualHarassmentsueConsultant";
+            break;            
+        default:
+            console.log("default");
+    }
+
+}
+
+        
 
 const initState = [{ text: 'hey'}];
 

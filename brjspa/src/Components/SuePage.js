@@ -6,18 +6,17 @@ import $ from 'jquery'
 
 
 
+
 class SuePage extends Component {
     render() {
         window.$(document).ready(function() {
             window.$('.modal').modal();
         });
-        
         return (
             <div className="page">
                 <div id="Choice" class="slideRight"><Choice /></div>
                 <div id="Screen" class="slideDown">
                     Sue me!!!
-                    
                     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
                     <div id="modal1" class="modal">
                         <div class="modal-content">
