@@ -33,7 +33,7 @@ class SuePage extends Component {
                 children: [
                   {
                     name: "Sex Discrimination Ordinance s2(5)",
-                    actor: "This is just to show how to build a complex tree with multiple levels of children. Enjoy!",
+                    actor: "",
                     children: [
                     {
                         name: "Initiate lawsuit on your own",
@@ -131,15 +131,40 @@ class SuePage extends Component {
                                         },
                                         {
                                             name: "ref: Case Law",
-                                            actor: `Sex Discrimination Ordinance s76(3A): District Courts have the power to provide the following remedies:
+                                            actor: `Past remedies awarded by the courts (courts take non-sexual harassment cases into consideration when assessing remedies):
 
-                                            1.	Make a declaration that the respondent has engaged in conduct, or committed an act, that is unlawful under this Ordinance, and order that the respondent shall not repeat or continue such unlawful conduct or act;
-                                            2.	Order that the respondent shall redress any loss or damage suffered by the claimant;
-                                            3.	Order that the respondent shall employ or re-employ the claimant;
-                                            4.	Order that the respondent shall promote the claimant;
-                                            5.	Order that the respondent pay to the claimant damages by way of compensation for any loss or damage suffered by reason of the respondent’s conduct or act;
-                                            6.	Order that the respondent shall pay to the claimant punitive (damages that punish the wrongdoer) or exemplary (injury to feelings) damages; or
-                                            7.	Make an order declaring void in whole or part and either ab initio or from such date as may be specified in the order, any contract or agreement made in contravention of this Ordinance.
+                                            Yuen Sha Sha v Tse Chi Pun
+                                            -	Voyeuristic camcording of friend undressing in her bedroom
+                                            -	HK$50,000 damages for injury to her feelings 
+                                            -	An order against the defendant to apologize to the victim
+                                            
+                                            Ma Bik Yung v Ko Chuen
+                                            -	Taxi-driver made oppressive and insulting remarks regarding victim’s disability
+                                            -	Total sum of HK$10,000 in exemplary and punitive damages
+                                            
+                                            Yuen Wai Han v South Elderly Affairs Ltd
+                                            -	Victim’s contract with defendant rescinded due to her pregnancy
+                                            -	Punitive damages: HK$10,000
+                                            -	Exemplary damages: HK$62,500
+                                            
+                                            Siu Kai Yuen v Maria College
+                                            -	Victim dismissed by defendant due to his cancer condition
+                                            -	Exemplary damages: HK$30,000
+                                            
+                                            Lam Wing Lai v YT Cheng (Chingtai) Ltd
+                                            -	Defendant dismissed the plaintiff after her childbirth
+                                            -	Loss of income: HK$88,500
+                                            -	Exemplary damages: HK$75,000
+                                            
+                                            L v Burton
+                                            -	Continuous sexual harassment in the workplace
+                                            -	Exemplary damages: HK$100,000
+                                            -	Loss of income: HK$77,000
+                                            -	Punitive damages: HK$20,000
+                                            
+                                            B v King of the King Group
+                                            -	Fellow employee chef deliberately touched the victim inappropriately
+                                            -	Exemplary damages: $80,000
                                             `
                                         }
                                     ]
